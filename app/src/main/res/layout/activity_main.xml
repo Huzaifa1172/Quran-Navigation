@@ -4,43 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5E4141"
+    android:background="#504C4C"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="76dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_surah"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/download" />
 
     <Button
 
         android:id="@+id/btn_surah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="291dp"
         android:onClick="surah"
         android:text="Surah Index"
-        app:layout_constraintBottom_toTopOf="@+id/btn_parah"
-        app:layout_constraintEnd_toEndOf="@+id/btn_github"
-        app:layout_constraintStart_toStartOf="@+id/btn_github"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:backgroundTint="#868A87"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_parah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-
-        android:layout_marginBottom="39dp"
+        android:backgroundTint="#868A87"
+        android:layout_marginTop="65dp"
         android:onClick="parah"
         android:text="Parah Index"
-        app:layout_constraintBottom_toTopOf="@+id/btn_github"
         app:layout_constraintStart_toStartOf="@+id/btn_surah"
         app:layout_constraintTop_toBottomOf="@+id/btn_surah" />
 
@@ -48,12 +36,13 @@
         android:id="@+id/btn_github"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="141dp"
+        android:layout_marginTop="61dp"
+        android:backgroundTint="#868A87"
+        android:layout_marginEnd="20dp"
         android:onClick="github"
         android:text="Github"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_parah"
         app:layout_constraintTop_toBottomOf="@+id/btn_parah" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_github=findViewById(R.id.btn_github);
-        btn_parah=findViewById(R.id.btn_parah);
-        btn_surah=findViewById(R.id.btn_surah);
+        //btn_github=findViewById(R.id.btn_github);
+        //btn_parah=findViewById(R.id.btn_parah);
+        //btn_surah=findViewById(R.id.btn_surah);
     }
     public void surah(View v)
     {
