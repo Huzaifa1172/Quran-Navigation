@@ -13,51 +13,57 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecyclerParahListAdpater extends RecyclerView.Adapter<RecyclerParahListAdpater.ViewHolder> {
+public class RecyclerSurahListAdpater extends RecyclerView.Adapter<RecyclerSurahListAdpater.ViewHolder> {
+
 
     Context context;
-    ArrayList<Integer> parahslist;
-    RecyclerParahListAdpater(Context context,ArrayList<Integer> parahsList)
+    ArrayList<String> surahslist;
+    RecyclerSurahListAdpater(Context context,ArrayList<String> parahsList)
     {
         this.context=context;
-        this.parahslist=parahsList;
+        this.surahslist=parahsList;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(context).inflate(R.layout.parah_card,parent,false);
+
+        View v= LayoutInflater.from(context).inflate(R.layout.surah_card,parent,false);
         ViewHolder view=new ViewHolder(v);
         return view;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.data=parahslist.get(position);
+        holder.data=surahslist.get(position);
         if(position%2!=0)
-            holder.parah_text.setBackgroundColor(Color.argb(100,0,3,76));
-        holder.parah_text.setText("Para No: " + holder.data.toString());
-        holder.parah_text.setOnClickListener(new View.OnClickListener() {
+        {
+           holder.surah_text.setBackgroundColor(Color.argb(100,0,3,76));
+        }
+        holder.surah_text.setText(holder.data.toString());
+        holder.surah_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(),DisplayParahActivity.class);
-                intent.putExtra("parah_no", holder.data);
+                Intent intent = new Intent(view.getContext(),DisplaySurahActivity.class);
+                intent.putExtra("surah_name", holder.data);
                 view.getContext().startActivity(intent);
             }
         });
+
     }
 
     @Override
     public int getItemCount() {
-        return parahslist.size();
+        return surahslist.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView parah_text;
-        Integer data;
+        TextView surah_text;
+        String data;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            parah_text=itemView.findViewById(R.id.parah_text);
+            surah_text=itemView.findViewById(R.id.surah_text);
         }
+
     }
 }

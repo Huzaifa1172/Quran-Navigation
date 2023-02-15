@@ -15,7 +15,7 @@ public class surahslist extends AppCompatActivity {
     QuranDataHelper qdh=new QuranDataHelper();
 
     RecyclerView recyclerView;
-    RecyclerParahListAdpater parahsAdapter;
+    RecyclerSurahListAdpater surahsAdapter;
 
 
     @Override
@@ -27,8 +27,8 @@ public class surahslist extends AppCompatActivity {
         recyclerView=findViewById(R.id.Surah_recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        parahsAdapter=new RecyclerParahListAdpater(this,surahNameList);
-        recyclerView.setAdapter(parahsAdapter);
+        surahsAdapter=new RecyclerSurahListAdpater(this,surahNameList);
+        recyclerView.setAdapter(surahsAdapter);
 
 
 
