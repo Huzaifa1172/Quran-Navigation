@@ -46,12 +46,10 @@ public class RecyclerParahListAdpater extends RecyclerView.Adapter<RecyclerParah
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return parahslist.size();
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView parah_text;
         Integer data;
